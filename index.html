@@ -1,0 +1,1963 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta
+      name="description"
+      content="Portfolio of Aron Sabu Abraham — BCA student, cybersecurity enthusiast and cloud & DevOps learner."
+    />
+    <title>Aron Sabu Abraham — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #111315;
+        --surface: #191c1f;
+        --surface-2: #202428;
+        --text: #f2f0ea;
+        --muted: #a6a6a0;
+        --accent: #b89b72;
+        --line: #303438;
+        --max: 1120px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 88px;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        line-height: 1.7;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+      .wrap {
+        width: min(var(--max), calc(100% - 48px));
+        margin: 0 auto;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(17, 19, 21, 0.88);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      nav {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+      .brand {
+        font:
+          800 1.12rem Manrope,
+          sans-serif;
+        letter-spacing: 0.08em;
+      }
+      .brand span {
+        color: var(--accent);
+      }
+      .navlinks {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+      .navlinks a:hover,
+      .text-link:hover {
+        color: var(--accent);
+      }
+      .nav-cta {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 9px 17px;
+        color: var(--text);
+      }
+      .menu {
+        display: none;
+        border: 1px solid var(--line);
+        color: var(--text);
+        background: transparent;
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+      .hero {
+        min-height: 680px;
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 72px;
+        align-items: center;
+        padding: 90px 0 100px;
+      }
+      .eyebrow {
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.19em;
+        font-size: 0.72rem;
+        font-weight: 700;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: Manrope, sans-serif;
+        line-height: 1.15;
+        margin: 0;
+      }
+      h1 {
+        font-size: clamp(2.8rem, 6vw, 5.35rem);
+        letter-spacing: -0.065em;
+        max-width: 760px;
+        margin: 18px 0 20px;
+      }
+      h1 .accent {
+        color: var(--accent);
+      }
+      .hero-sub {
+        color: #c1c0ba;
+        font-size: clamp(1rem, 1.5vw, 1.16rem);
+        max-width: 650px;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 13px;
+        margin-top: 32px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 20px;
+        border-radius: 7px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: 0.25s ease;
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: #171717;
+      }
+      .btn-primary:hover {
+        background: #c9ad84;
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        border: 1px solid #55534e;
+        color: var(--text);
+      }
+      .btn-outline:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .portrait-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        gap: 20px;
+      }
+      .portrait-frame {
+        width: min(100%, 300px);
+        aspect-ratio: 1 / 1;
+        padding: 7px;
+        border: 1px solid rgba(184, 155, 114, 0.72);
+        border-radius: 50%;
+        position: relative;
+        background: linear-gradient(
+          145deg,
+          rgba(184, 155, 114, 0.18),
+          rgba(255, 255, 255, 0.025)
+        );
+        box-shadow:
+          0 18px 55px rgba(0, 0, 0, 0.28),
+          0 0 0 5px rgba(184, 155, 114, 0.045);
+      }
+      .portrait-frame:before {
+        content: "";
+        position: absolute;
+        inset: -7px;
+        border: 1px solid rgba(184, 155, 114, 0.22);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .portrait-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 27%;
+        border-radius: 50%;
+        filter: saturate(0.82);
+        display: block;
+      }
+      .photo-caption {
+        position: static;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        color: var(--muted);
+        font-size: 0.84rem;
+        letter-spacing: 0.01em;
+      }
+      .photo-caption svg {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
+        color: var(--accent);
+      }
+      section {
+        padding: 100px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.055);
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 24px;
+        margin-bottom: 42px;
+      }
+      .section-head h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.05em;
+        margin-top: 10px;
+      }
+      .section-note {
+        max-width: 390px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 60px;
+      }
+      .about-copy {
+        color: #c4c3bd;
+        font-size: 1.02rem;
+      }
+      .about-copy p {
+        margin: 0 0 18px;
+      }
+      .info-panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 28px;
+      }
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 0.88rem;
+      }
+      .info-row:last-child {
+        border: 0;
+      }
+      .info-row span:first-child {
+        color: var(--muted);
+      }
+      .info-row span:last-child {
+        text-align: right;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .skill-card,
+      .project-card,
+      .timeline-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 25px;
+        transition:
+          transform 0.25s,
+          border-color 0.25s;
+      }
+      .skill-card:hover,
+      .project-card:hover,
+      .timeline-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(184, 155, 114, 0.55);
+      }
+      .card-kicker {
+        color: var(--accent);
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .skill-card h3,
+      .project-card h3,
+      .timeline-card h3 {
+        font-size: 1.12rem;
+        margin: 12px 0;
+      }
+      .skill-card p,
+      .project-card p,
+      .timeline-card p {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+      .tag {
+        border: 1px solid #3a3e41;
+        background: #202428;
+        color: #d0cec7;
+        border-radius: 5px;
+        padding: 5px 9px;
+        font-size: 0.74rem;
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 17px;
+      }
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 285px;
+      }
+      .project-card .project-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--accent);
+      }
+      .project-card p {
+        flex: 1;
+      }
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text);
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-top: 22px;
+      }
+      .project-link:hover {
+        color: var(--accent);
+      }
+      .experience-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .timeline-meta {
+        color: var(--accent);
+        font-size: 0.78rem;
+        margin-top: 7px;
+      }
+      .timeline-card ul {
+        color: var(--muted);
+        font-size: 0.88rem;
+        padding-left: 18px;
+        margin: 16px 0 0;
+      }
+      .timeline-card li {
+        margin: 8px 0;
+      }
+      .achievement {
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .achievement:last-child {
+        border: 0;
+      }
+      .achievement-mark {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(184, 155, 114, 0.5);
+        color: var(--accent);
+        border-radius: 50%;
+      }
+      .achievement h3 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+      }
+      .achievement p {
+        color: var(--muted);
+        font-size: 0.88rem;
+        margin: 0;
+      }
+      .contact-box {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 30px;
+        align-items: center;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 38px;
+      }
+      .contact-box h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 10px 0;
+        letter-spacing: -0.05em;
+      }
+      .contact-box p {
+        color: var(--muted);
+        margin: 0;
+      }
+      .contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 0.9rem;
+      }
+      .contact-links a:hover {
+        color: var(--accent);
+      }
+
+      .contact-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid var(--line);
+      }
+      .contact-top h2 {
+        font-size: clamp(1.45rem, 3vw, 2rem);
+        letter-spacing: -0.045em;
+        margin: 0 0 5px;
+      }
+      .contact-top p {
+        color: var(--muted);
+        margin: 0;
+        font-size: 0.92rem;
+      }
+      .contact-socials {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: #c8c7c1;
+      }
+      .email-pill {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        padding: 10px 13px;
+        font-size: 0.84rem;
+        color: var(--text);
+      }
+      .email-pill button {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 0 0 0 4px;
+      }
+      .email-pill button:hover,
+      .social-link:hover {
+        color: var(--accent);
+      }
+      .social-link {
+        font-size: 1.15rem;
+        color: #b8b8b2;
+        transition: color 0.2s;
+      }
+      .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1.35fr 1.1fr auto;
+        gap: 10px;
+        padding-top: 20px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        min-width: 0;
+        border: 1px solid #303438;
+        border-radius: 8px;
+        background: #0d0f11;
+        color: var(--text);
+        padding: 13px 15px;
+        font: inherit;
+        font-size: 0.9rem;
+        outline: none;
+        resize: vertical;
+      }
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: var(--accent);
+      }
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder {
+        color: #85868a;
+      }
+      .send-btn {
+        border: 0;
+        border-radius: 8px;
+        background: var(--text);
+        color: #171819;
+        padding: 0 23px;
+        font:
+          600 0.9rem "DM Sans",
+          sans-serif;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        transition: 0.2s;
+      }
+      .send-btn:hover {
+        background: var(--accent);
+        transform: translateY(-1px);
+      }
+      .form-note {
+        color: var(--muted);
+        font-size: 0.76rem;
+        margin: 10px 0 0;
+      }
+      @media (max-width: 760px) {
+        .contact-form {
+          grid-template-columns: 1fr 1fr;
+        }
+        .contact-form textarea {
+          grid-column: 1 / -1;
+          min-height: 48px;
+        }
+        .send-btn {
+          min-height: 46px;
+        }
+      }
+      @media (max-width: 560px) {
+        .contact-top {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .contact-socials {
+          width: 100%;
+          justify-content: space-between;
+        }
+        .email-pill {
+          flex: 1;
+        }
+        .contact-form {
+          grid-template-columns: 1fr;
+        }
+        .contact-form textarea {
+          grid-column: auto;
+        }
+      }
+
+      footer {
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      @media (max-width: 850px) {
+        .hero {
+          grid-template-columns: 1fr 0.7fr;
+          gap: 35px;
+          min-height: auto;
+          padding: 75px 0;
+        }
+        .skills-grid,
+        .projects-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .about-grid {
+          gap: 28px;
+        }
+      }
+      @media (max-width: 650px) {
+        .wrap {
+          width: min(100% - 32px, var(--max));
+        }
+        nav {
+          min-height: 68px;
+        }
+        .menu {
+          display: block;
+        }
+        .navlinks {
+          display: none;
+          position: absolute;
+          top: 68px;
+          left: 0;
+          right: 0;
+          padding: 18px 24px 22px;
+          background: #171a1d;
+          border-bottom: 1px solid var(--line);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+        }
+        .navlinks.open {
+          display: flex;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 65px 0 75px;
+          gap: 45px;
+        }
+        .hero-copy {
+          order: 1;
+        }
+        .portrait-area {
+          order: 0;
+          justify-content: flex-start;
+          padding-left: 18px;
+        }
+        .portrait-frame {
+          width: 205px;
+        }
+        .photo-caption {
+          white-space: nowrap;
+        }
+        h1 {
+          font-size: clamp(2.8rem, 13vw, 4.1rem);
+        }
+        section {
+          padding: 72px 0;
+        }
+        .section-head {
+          display: block;
+          margin-bottom: 30px;
+        }
+        .section-note {
+          margin-top: 15px;
+        }
+        .about-grid,
+        .experience-grid,
+        .contact-box {
+          grid-template-columns: 1fr;
+        }
+        .skills-grid,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-box {
+          padding: 26px;
+        }
+        .footer-inner {
+          flex-direction: column;
+        }
+      }
+    </style>
+    <style id="cloud3d">
+      :root {
+        --bg: #0a0a0b;
+        --surface: rgba(26, 23, 18, 0.55);
+        --surface-2: rgba(22, 36, 70, 0.6);
+        --text: #f2efe6;
+        --muted: #a9a69d;
+        --accent: #e6cf9d;
+        --accent-2: #b89b72;
+        --line: rgba(230, 207, 157, 0.17);
+      }
+      html,
+      body {
+        background-color: var(--bg);
+      }
+      body {
+        background-image:
+          radial-gradient(1100px 700px at 80% -8%, #211b11 0%, transparent 62%),
+          radial-gradient(900px 600px at 0% 45%, #15120d 0%, transparent 60%);
+        background-attachment: fixed;
+      }
+      main {
+        overflow-x: clip;
+      }
+      main,
+      footer {
+        position: relative;
+        z-index: 1;
+      }
+      #scene {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+      }
+      #progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        transform-origin: 0 50%;
+        transform: scaleX(0);
+        background: linear-gradient(90deg, #e6cf9d, #b89b72);
+        box-shadow: 0 0 12px #e6cf9d;
+        z-index: 20;
+      }
+      header {
+        background: rgba(10, 10, 11, 0.62);
+        border-bottom: 1px solid var(--line);
+      }
+      h1,
+      h2,
+      h3,
+      .brand {
+        font-family: Sora, Manrope, sans-serif;
+      }
+      .brand span {
+        color: var(--accent);
+        text-shadow: 0 0 16px var(--accent);
+      }
+      .navlinks a:hover,
+      .text-link:hover,
+      .project-link:hover,
+      .contact-links a:hover {
+        color: var(--accent);
+      }
+      .nav-cta {
+        border-color: rgba(230, 207, 157, 0.4);
+        transition: 0.25s;
+      }
+      .nav-cta:hover {
+        box-shadow: 0 0 20px rgba(230, 207, 157, 0.3);
+        background: rgba(230, 207, 157, 0.08);
+      }
+      h1 .accent {
+        background: linear-gradient(100deg, #e6cf9d, #b89b72 62%, #f4e8c9);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero-sub {
+        color: #cbc8be;
+      }
+      .btn-primary {
+        background: linear-gradient(110deg, #e6cf9d, #b89b72);
+        color: #17140e;
+        box-shadow: 0 8px 30px rgba(230, 207, 157, 0.25);
+      }
+      .btn-primary:hover {
+        background: linear-gradient(110deg, #f0dcae, #cdb185);
+        box-shadow: 0 10px 38px rgba(230, 207, 157, 0.4);
+      }
+      .btn-outline {
+        border-color: rgba(230, 207, 157, 0.38);
+        backdrop-filter: blur(8px);
+      }
+      .btn-outline:hover {
+        border-color: var(--accent);
+        background: rgba(230, 207, 157, 0.07);
+      }
+      .portrait-frame {
+        border: 0;
+        background: none;
+        box-shadow: none;
+        padding: 9px;
+        isolation: isolate;
+      }
+      .portrait-frame img {
+        filter: saturate(0.92) contrast(1.04);
+        box-shadow: 0 0 70px rgba(230, 207, 157, 0.28);
+      }
+      .photo-caption svg {
+        color: var(--accent);
+      }
+      section {
+        border-top: 0;
+        position: relative;
+      }
+      section:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(230, 207, 157, 0.45),
+          rgba(184, 155, 114, 0.35),
+          transparent
+        );
+      }
+      .hero:before {
+        display: none;
+      }
+      .skill-card,
+      .project-card,
+      .timeline-card,
+      .info-panel,
+      .contact-box {
+        background: linear-gradient(
+          160deg,
+          rgba(42, 35, 24, 0.5),
+          rgba(10, 10, 10, 0.55)
+        );
+        -webkit-backdrop-filter: blur(14px);
+        backdrop-filter: blur(14px);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+          0 20px 50px rgba(0, 0, 0, 0.28),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        transition:
+          transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+          border-color 0.25s,
+          box-shadow 0.25s;
+      }
+      .skill-card:hover,
+      .project-card:hover,
+      .timeline-card:hover {
+        border-color: rgba(230, 207, 157, 0.5);
+        box-shadow:
+          0 24px 60px rgba(0, 0, 0, 0.35),
+          0 0 34px rgba(230, 207, 157, 0.12),
+          inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      }
+      .tilt:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          320px circle at var(--mx, 50%) var(--my, 0%),
+          rgba(230, 207, 157, 0.13),
+          transparent 62%
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+      }
+      .tilt:hover:before {
+        opacity: 1;
+      }
+      .card-kicker,
+      .timeline-meta,
+      .eyebrow,
+      .project-card .project-top {
+        color: var(--accent);
+      }
+      .tag {
+        background: rgba(230, 207, 157, 0.07);
+        border-color: rgba(230, 207, 157, 0.22);
+        color: #e8e2d2;
+      }
+      .achievement {
+        border-bottom-color: var(--line);
+      }
+      .achievement-mark {
+        border-color: rgba(230, 207, 157, 0.5);
+        color: var(--accent);
+        box-shadow: 0 0 18px rgba(230, 207, 157, 0.18);
+      }
+      .info-row,
+      .contact-top {
+        border-bottom-color: var(--line);
+      }
+      .email-pill {
+        background: rgba(26, 23, 18, 0.55);
+        border-color: var(--line);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+      .contact-form input,
+      .contact-form textarea {
+        background: rgba(8, 8, 8, 0.7);
+        border-color: var(--line);
+      }
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        box-shadow: 0 0 0 3px rgba(230, 207, 157, 0.15);
+      }
+      .send-btn {
+        background: linear-gradient(110deg, #e6cf9d, #b89b72);
+        color: #17140e;
+      }
+      .send-btn:hover {
+        background: linear-gradient(110deg, #f0dcae, #cdb185);
+        box-shadow: 0 8px 28px rgba(230, 207, 157, 0.35);
+      }
+      .social-link:hover,
+      .email-pill button:hover {
+        color: var(--accent);
+      }
+      footer {
+        border-top-color: var(--line);
+        background: rgba(10, 10, 11, 0.5);
+      }
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+      @media (max-width: 650px) {
+        .navlinks {
+          background: rgba(16, 15, 13, 0.96);
+        }
+      }
+      .ach-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+      .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 22px;
+      }
+      .cert {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 0;
+        cursor: zoom-in;
+        font: inherit;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        overflow: hidden;
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .cert:hover,
+      .cert:focus-visible {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        outline: none;
+      }
+      .cert-img {
+        display: block;
+        height: 220px;
+        flex: none;
+        background: #1a1c1f;
+        padding: 10px;
+      }
+      .cert-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        border-radius: 4px;
+      }
+      .cert-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 14px 16px 16px;
+        border-top: 1px solid var(--line);
+      }
+      .cert-info strong {
+        font-weight: 600;
+        line-height: 1.3;
+      }
+      .cert-info span {
+        font-size: 0.85rem;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 20px;
+        background: rgba(8, 8, 7, 0.92);
+        backdrop-filter: blur(6px);
+      }
+      .lightbox[hidden] {
+        display: none;
+      }
+      .lightbox figure {
+        margin: 0;
+        max-width: min(92vw, 1100px);
+        text-align: center;
+      }
+      .lightbox img {
+        max-width: 100%;
+        max-height: 78vh;
+        border-radius: 6px;
+        box-shadow: 0 20px 70px rgba(0, 0, 0, 0.6);
+        background: #fff;
+      }
+      .lightbox figcaption {
+        margin-top: 14px;
+        color: var(--text);
+        font-size: 0.95rem;
+      }
+      .lightbox figcaption a {
+        color: var(--accent);
+        margin-left: 10px;
+      }
+      .lb-close,
+      .lb-nav {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text);
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        font-size: 1.6rem;
+        line-height: 1;
+        cursor: pointer;
+        flex: none;
+      }
+      .lb-close:hover,
+      .lb-nav:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .lb-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+      .portrait-frame:before {
+        content: "";
+        position: absolute;
+        inset: -14px;
+        border-radius: 50%;
+        border: 2px solid rgba(230, 207, 157, 0.14);
+        border-top-color: #e6cf9d;
+        border-right-color: rgba(230, 207, 157, 0.4);
+        pointer-events: none;
+        animation: spin 9s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (max-width: 650px) {
+        .ach-grid {
+          grid-template-columns: 1fr;
+        }
+        .lb-nav {
+          position: absolute;
+          bottom: 18px;
+        }
+        .lb-prev {
+          left: 18px;
+        }
+        .lb-next {
+          right: 18px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .portrait-frame:before {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div id="progress"></div>
+    <header>
+      <div class="wrap">
+        <nav>
+          <a class="brand" href="#home">ARON<span>.</span></a>
+          <button class="menu" id="menuBtn" aria-label="Toggle navigation">
+            Menu
+          </button>
+          <div class="navlinks" id="navlinks">
+            <a href="#about">About</a><a href="#skills">Skills</a
+            ><a href="#projects">Projects</a>
+            <a href="#experience">Experience</a
+            ><a href="#achievements">Achievements</a
+            ><a href="#certificates">Certificates</a>
+            <a class="nav-cta" href="#contact">Let's connect ↗</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <section class="hero" id="home" style="border: 0">
+          <div class="hero-copy">
+            <div class="eyebrow">Cybersecurity · Cloud · Development</div>
+            <h1>Aron Sabu<br /><span class="accent">Abraham.</span></h1>
+            <p class="hero-sub">
+              Building. Securing. Innovating. I'm a BCA student passionate about
+              cybersecurity, cloud technologies and creating practical software
+              solutions.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects"
+                >Explore my work <span>↗</span></a
+              >
+              <a
+                class="btn btn-outline"
+                href="assets/Aron-Sabu-Abraham-Resume.pdf"
+                target="_blank"
+                rel="noopener"
+                >View résumé <span>↓</span></a
+              >
+            </div>
+          </div>
+          <div class="portrait-area">
+            <div class="portrait-frame">
+              <img
+                src="assets/aron-profile.jpg"
+                alt="Portrait of Aron Sabu Abraham"
+              />
+            </div>
+            <div class="photo-caption">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle></svg
+              ><span>Pathanamthitta, Kerala, India</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="reveal">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">A little about me</div>
+              <h2>Curious by nature.<br />Driven by technology.</h2>
+            </div>
+            <p class="section-note">
+              A thoughtful approach to learning, building and making technology
+              more useful and secure.
+            </p>
+          </div>
+          <div class="about-grid">
+            <div class="about-copy">
+              <p>
+                I'm a third-year Bachelor of Computer Applications student at
+                Marian College Kuttikkanam Autonomous, with a strong interest in
+                cybersecurity, cloud infrastructure and software development.
+              </p>
+              <p>
+                I enjoy understanding how systems work, exploring how they can
+                be secured, and turning ideas into working applications. My
+                learning spans programming, networking, Linux, cloud platforms,
+                DevOps practices and application security.
+              </p>
+              <p>
+                Through hands-on projects and my industry internship at IPSR
+                Solutions Limited, I've gained practical exposure to AWS,
+                Microsoft Azure, Docker, automation, CI/CD workflows and
+                vulnerability assessment.
+              </p>
+              <p>
+                I'm motivated by continuous learning, solving technical
+                challenges and collaborating with others. I'm working towards a
+                career where I can contribute to building reliable, secure and
+                well-engineered technology.
+              </p>
+            </div>
+            <div class="info-panel">
+              <div class="info-row">
+                <span>Education</span><span>BCA · Third Year</span>
+              </div>
+              <div class="info-row">
+                <span>College</span><span>Marian College Kuttikkanam</span>
+              </div>
+              <div class="info-row">
+                <span>Interests</span><span>Cybersecurity, Cloud, DevOps</span>
+              </div>
+              <div class="info-row">
+                <span>Location</span><span>Pathanamthitta, Kerala, India</span>
+              </div>
+              <div class="info-row">
+                <span>Focus</span><span>Learning & building</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="reveal">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">What I work with</div>
+              <h2>Technical skills</h2>
+            </div>
+            <p class="section-note">
+              A growing toolkit across development, infrastructure and security.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="card-kicker">01 / Development</div>
+              <h3>Programming & Web</h3>
+              <p>Building application logic and user-facing experiences.</p>
+              <div class="tags">
+                <span class="tag">Python</span><span class="tag">Java</span
+                ><span class="tag">C++</span><span class="tag">HTML</span
+                ><span class="tag">CSS</span><span class="tag">SQL</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="card-kicker">02 / Infrastructure</div>
+              <h3>Cloud & DevOps</h3>
+              <p>
+                Working with cloud resources, containers and delivery
+                automation.
+              </p>
+              <div class="tags">
+                <span class="tag">AWS</span
+                ><span class="tag">Microsoft Azure</span
+                ><span class="tag">Docker</span
+                ><span class="tag">Docker Compose</span
+                ><span class="tag">Ansible</span><span class="tag">Nginx</span
+                ><span class="tag">Azure DevOps</span
+                ><span class="tag">Git/GitHub</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="card-kicker">03 / Security</div>
+              <h3>Cybersecurity</h3>
+              <p>
+                Assessing application risks and strengthening system security.
+              </p>
+              <div class="tags">
+                <span class="tag">Burp Suite</span
+                ><span class="tag">OWASP Top 10</span
+                ><span class="tag">Vulnerability Assessment</span
+                ><span class="tag">Linux Hardening</span
+                ><span class="tag">SSL/TLS</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="card-kicker">04 / Systems</div>
+              <h3>Operating Systems</h3>
+              <p>Command-line administration and Linux environments.</p>
+              <div class="tags">
+                <span class="tag">Ubuntu</span
+                ><span class="tag">Astra Linux</span
+                ><span class="tag">RHEL</span><span class="tag">Linux CLI</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="card-kicker">05 / Networking</div>
+              <h3>Networking & Infrastructure</h3>
+              <p>
+                Foundational understanding of networks, services and system
+                connectivity.
+              </p>
+              <div class="tags">
+                <span class="tag">Networking</span
+                ><span class="tag">TCP/IP</span
+                ><span class="tag">Network troubleshooting</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="card-kicker">06 / Professional</div>
+              <h3>Ways of working</h3>
+              <p>
+                Bringing curiosity and accountability to collaborative work.
+              </p>
+              <div class="tags">
+                <span class="tag">Problem-solving</span
+                ><span class="tag">Team collaboration</span
+                ><span class="tag">Adaptability</span
+                ><span class="tag">Communication</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="projects" class="reveal">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Selected work</div>
+              <h2>Projects</h2>
+            </div>
+            <p class="section-note">
+              Practical work that reflects what I've been learning across
+              programming and infrastructure.
+            </p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-top">
+                <span class="card-kicker">01 / Java</span><span>↗</span>
+              </div>
+              <h3>DailyDose</h3>
+              <p>
+                A desktop application built with Java Swing, applying
+                object-oriented programming and event-driven GUI development.
+              </p>
+              <div class="tags">
+                <span class="tag">Java</span><span class="tag">Swing</span
+                ><span class="tag">OOP</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/aronsabu/java-project-DailyDose.git"
+                target="_blank"
+                rel="noopener"
+                >View on GitHub ↗</a
+              >
+            </article>
+            <article class="project-card">
+              <div class="project-top">
+                <span class="card-kicker">02 / Internship</span><span>↗</span>
+              </div>
+              <h3>Food Ordering System</h3>
+              <p>
+                A full-stack online food ordering application developed during
+                my internship and deployed on AWS EC2, containerized with Docker
+                and served through Nginx.
+              </p>
+              <div class="tags">
+                <span class="tag">Full-stack</span
+                ><span class="tag">AWS EC2</span><span class="tag">Docker</span
+                ><span class="tag">Nginx</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/aronsabu/food-ordering-system.git"
+                target="_blank"
+                rel="noopener"
+                >View on GitHub ↗</a
+              >
+            </article>
+            <article class="project-card">
+              <div class="project-top">
+                <span class="card-kicker">03 / Python</span><span>↗</span>
+              </div>
+              <h3>Python Todo</h3>
+              <p>
+                A task-management project created to strengthen my Python
+                programming fundamentals and explore containerized development
+                with Docker.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span><span class="tag">Docker</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/aronsabu/python-todo-docker.git"
+                target="_blank"
+                rel="noopener"
+                >View on GitHub ↗</a
+              >
+            </article>
+          </div>
+        </section>
+
+        <section id="experience" class="reveal">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Where I've learned</div>
+              <h2>Experience & education</h2>
+            </div>
+            <p class="section-note">
+              Academic foundations complemented by hands-on industry exposure.
+            </p>
+          </div>
+          <div class="experience-grid">
+            <article class="timeline-card">
+              <div class="card-kicker">Industry internship</div>
+              <h3>IPSR Solutions Limited</h3>
+              <div class="timeline-meta">
+                AI-Integrated Cloud, DevOps & Cybersecurity Intern · April–June
+                2026
+              </div>
+              <p style="margin-top: 14px">
+                8-week, 240-hour industry internship.
+              </p>
+              <ul>
+                <li>
+                  Provisioned cloud infrastructure on AWS and Microsoft Azure,
+                  including access controls and Linux web servers.
+                </li>
+                <li>
+                  Automated server configuration and deployments using Ansible.
+                </li>
+                <li>Built Git-triggered CI/CD workflows using Azure DevOps.</li>
+                <li>
+                  Containerized a Python web application using Docker and Docker
+                  Compose.
+                </li>
+                <li>
+                  Practised vulnerability assessment for SQL injection and XSS
+                  using Burp Suite and OWASP Top 10 methodology.
+                </li>
+              </ul>
+            </article>
+            <article class="timeline-card">
+              <div class="card-kicker">Education</div>
+              <h3>Marian College Kuttikkanam Autonomous</h3>
+              <div class="timeline-meta">
+                Bachelor of Computer Applications · 2024–2027 (Expected)
+              </div>
+              <p style="margin-top: 14px">
+                Currently pursuing the third year of BCA under Mahatma Gandhi
+                University, Kottayam.
+              </p>
+              <div class="tags">
+                <span class="tag">Computer Applications</span
+                ><span class="tag">Programming</span
+                ><span class="tag">IT Fundamentals</span>
+              </div>
+              <div style="height: 22px"></div>
+              <div class="card-kicker">Earlier education</div>
+              <h3>MSHSS Ranni</h3>
+              <p>Higher Secondary Education (PCBM), 2022–2024.</p>
+              <h3 style="margin-top: 18px">SCVHSS Kottanad</h3>
+              <p>SSLC, 2022.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="achievements" class="reveal">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Beyond the classroom</div>
+              <h2>Achievements</h2>
+            </div>
+            <p class="section-note">
+              Responsibilities and academic milestones that have shaped my
+              journey.
+            </p>
+          </div>
+          <div class="ach-grid">
+            <div class="achievement">
+              <div class="achievement-mark">✦</div>
+              <div>
+                <h3>Value Education Representative</h3>
+                <p>
+                  Marian College Kuttikkanam Autonomous · 2025–2026. Served as
+                  a student-faculty liaison for the Value Education programme.
+                </p>
+              </div>
+            </div>
+            <div class="achievement">
+              <div class="achievement-mark">✦</div>
+              <div>
+                <h3>Academic Achievement</h3>
+                <p>
+                  Achieved an average SGPA of 9.55 across the first five
+                  semesters.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="certificates" class="reveal">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Verified learning</div>
+              <h2>Certificates</h2>
+            </div>
+            <p class="section-note">
+              Tap any certificate to view it in full size.
+            </p>
+          </div>
+          <div class="cert-grid">
+            <button class="cert" type="button" data-full="assets/cc/thumbs/ipsr-internship-full.jpg" data-src="assets/cc/IPSR Intership Certificate_page.jpg" data-title="AI-Integrated Cloud, DevOps &amp; Cybersecurity" aria-label="View certificate: AI-Integrated Cloud, DevOps &amp; Cybersecurity">
+              <span class="cert-img"><img src="assets/cc/thumbs/ipsr-internship.jpg" alt="Certificate: AI-Integrated Cloud, DevOps &amp; Cybersecurity" loading="lazy" /></span>
+              <span class="cert-info"><strong>AI-Integrated Cloud, DevOps &amp; Cybersecurity</strong><span>30-hour industry-led certificate course · ipsr solutions limited · May 18, 2026</span></span>
+            </button>
+            <button class="cert" type="button" data-full="assets/cc/thumbs/internship-8wk-full.jpg" data-src="assets/cc/Internship Certificate - 8 Weeks.jpg" data-title="Internship Certificate: Cloud, DevOps &amp; Cybersecurity" aria-label="View certificate: Internship Certificate: Cloud, DevOps &amp; Cybersecurity">
+              <span class="cert-img"><img src="assets/cc/thumbs/internship-8wk.jpg" alt="Certificate: Internship Certificate: Cloud, DevOps &amp; Cybersecurity" loading="lazy" /></span>
+              <span class="cert-info"><strong>Internship Certificate: Cloud, DevOps &amp; Cybersecurity</strong><span>8 weeks (240 hours) · ipsr solutions limited · June 3, 2026</span></span>
+            </button>
+            <button class="cert" type="button" data-full="assets/cc/thumbs/workshop-full.jpg" data-src="assets/cc/RHOIW23APR26_Click here to downlad your particiaption certificate.pdf" data-title="Getting Started with OpenShift AI for Future Careers" aria-label="View certificate: Getting Started with OpenShift AI for Future Careers">
+              <span class="cert-img"><img src="assets/cc/thumbs/workshop.jpg" alt="Certificate: Getting Started with OpenShift AI for Future Careers" loading="lazy" /></span>
+              <span class="cert-info"><strong>Getting Started with OpenShift AI for Future Careers</strong><span>Webinar by Red Hat with ipsr solutions limited · April 23, 2026</span></span>
+            </button>
+            <button class="cert" type="button" data-full="assets/cc/thumbs/ai-aware-full.jpg" data-src="assets/cc/Aron Sabu Abraham_AI_AWARE_CERTIFICATE.png" data-title="AI For All: AI Aware" aria-label="View certificate: AI For All: AI Aware">
+              <span class="cert-img"><img src="assets/cc/thumbs/ai-aware.jpg" alt="Certificate: AI For All: AI Aware" loading="lazy" /></span>
+              <span class="cert-info"><strong>AI For All: AI Aware</strong><span>Intel, CBSE and Digital India · November 27, 2025</span></span>
+            </button>
+            <button class="cert" type="button" data-full="assets/cc/thumbs/responsible-ai-full.jpg" data-src="assets/cc/resp ai_page-0001.jpg" data-title="Introduction to Responsible AI" aria-label="View certificate: Introduction to Responsible AI">
+              <span class="cert-img"><img src="assets/cc/thumbs/responsible-ai.jpg" alt="Certificate: Introduction to Responsible AI" loading="lazy" /></span>
+              <span class="cert-info"><strong>Introduction to Responsible AI</strong><span>Google Cloud with Simplilearn SkillUP · November 27, 2025</span></span>
+            </button>
+            <button class="cert" type="button" data-full="assets/cc/thumbs/ctf-full.jpg" data-src="assets/cc/UI_path ctf.pdf" data-title="Introduction to RPA UiPath" aria-label="View certificate: Introduction to RPA UiPath">
+              <span class="cert-img"><img src="assets/cc/thumbs/ctf.jpg" alt="Certificate: Introduction to RPA UiPath" loading="lazy" /></span>
+              <span class="cert-info"><strong>Introduction to RPA UiPath</strong><span>Simplilearn SkillUP · September 22, 2026</span></span>
+            </button>
+          </div>
+        </section>
+
+        <section id="contact" class="reveal">
+          <div class="contact-top">
+            <div>
+              <div class="eyebrow">Get in touch</div>
+              <h2>Let's connect.</h2>
+              <p>
+                Open to conversations around cybersecurity, cloud, DevOps and
+                technology.
+              </p>
+            </div>
+            <div class="contact-socials">
+              <a
+                class="email-pill"
+                href="mailto:aronsabu2006@gmail.com"
+                aria-label="Email Aron"
+              >
+                <span>✉</span><strong>aronsabu2006@gmail.com</strong>
+              </a>
+              <button
+                class="social-link"
+                type="button"
+                id="copyEmail"
+                aria-label="Copy email address"
+                title="Copy email"
+              >
+                ▢
+              </button>
+              <a
+                class="social-link"
+                href="https://github.com/aronsabu"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                title="GitHub"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="19"
+                  height="19"
+                  aria-hidden="true"
+                  focusable="false"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.08c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.93.1-.72.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.22-5.08 5.49.4.35.76 1.02.76 2.06v3.06c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/aron-sabu-abraham"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                >in</a
+              >
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <input
+              type="text"
+              id="senderName"
+              name="name"
+              placeholder="Your Name"
+              autocomplete="name"
+              required
+              aria-label="Your name"
+            />
+            <input
+              type="email"
+              id="senderEmail"
+              name="email"
+              placeholder="Your Email"
+              autocomplete="email"
+              required
+              aria-label="Your email"
+            />
+            <textarea
+              id="senderMessage"
+              name="message"
+              rows="1"
+              placeholder="A little about what you'd like to discuss..."
+              required
+              aria-label="Your message"
+            ></textarea>
+            <button class="send-btn" type="submit">
+              Send <span aria-hidden="true">➤</span>
+            </button>
+          </form>
+          <p class="form-note" id="formNote">
+            Your message will open in your email app, ready to send.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap footer-inner">
+        <span>© 2026 Aron Sabu Abraham</span
+        ><span>Designed with clarity, built with curiosity.</span>
+      </div>
+    </footer>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const navlinks = document.getElementById("navlinks");
+      menuBtn.addEventListener("click", () =>
+        navlinks.classList.toggle("open"),
+      );
+      navlinks
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => navlinks.classList.remove("open")),
+        );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      const contactForm = document.getElementById("contactForm");
+      const formNote = document.getElementById("formNote");
+      contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("senderName").value.trim();
+        const email = document.getElementById("senderEmail").value.trim();
+        const message = document.getElementById("senderMessage").value.trim();
+        const subject = encodeURIComponent("Portfolio enquiry from " + name);
+        const body = encodeURIComponent(
+          "Hi Aron,\n\n" + message + "\n\nFrom: " + name + "\nEmail: " + email,
+        );
+        formNote.textContent = "Opening your email app…";
+        window.location.href =
+          "mailto:aronsabu2006@gmail.com?subject=" + subject + "&body=" + body;
+      });
+      document
+        .getElementById("copyEmail")
+        .addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText("aronsabu2006@gmail.com");
+            document.getElementById("copyEmail").textContent = "✓";
+            formNote.textContent = "Email address copied.";
+          } catch {
+            formNote.textContent = "Email: aronsabu2006@gmail.com";
+          }
+        });
+    </script>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer" hidden>
+      <button class="lb-close" id="lbClose" type="button" aria-label="Close">×</button>
+      <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous certificate">‹</button>
+      <figure>
+        <img id="lbImg" alt="" />
+        <figcaption><span id="lbTitle"></span> <a id="lbOpen" href="#" target="_blank" rel="noopener">Open original</a></figcaption>
+      </figure>
+      <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next certificate">›</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+      (function () {
+        const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches,
+          small = innerWidth < 700;
+        const bar = document.getElementById("progress");
+        if (!reduce && !matchMedia("(hover:none)").matches) {
+          document
+            .querySelectorAll(
+              ".skill-card,.project-card,.timeline-card,.info-panel",
+            )
+            .forEach((c) => {
+              c.classList.add("tilt");
+              c.addEventListener("pointermove", (e) => {
+                const r = c.getBoundingClientRect(),
+                  x = (e.clientX - r.left) / r.width,
+                  y = (e.clientY - r.top) / r.height;
+                c.style.setProperty("--mx", x * 100 + "%");
+                c.style.setProperty("--my", y * 100 + "%");
+                c.style.transform =
+                  "perspective(900px) rotateX(" +
+                  (0.5 - y) * 7 +
+                  "deg) rotateY(" +
+                  (x - 0.5) * 9 +
+                  "deg) translateY(-4px)";
+              });
+              c.addEventListener("pointerleave", () => {
+                c.style.transform = "";
+              });
+            });
+        }
+        const cv = document.getElementById("scene");
+        try {
+          if (!window.THREE) throw 0;
+          const T = THREE,
+            rd = new T.WebGLRenderer({
+              canvas: cv,
+              alpha: true,
+              antialias: !small,
+            });
+          rd.setPixelRatio(Math.min(devicePixelRatio, small ? 1.5 : 2));
+          const sc = new T.Scene(),
+            cam = new T.PerspectiveCamera(45, 1, 0.1, 100);
+          cam.position.z = 7;
+          const ADD = T.AdditiveBlending,
+            CY = 0xe6cf9d,
+            IN = 0xb89b72,
+            R = Math.random;
+          const mk = (f) => {
+            const c = document.createElement("canvas");
+            c.width = 256;
+            c.height = 128;
+            f(c.getContext("2d"));
+            return new T.CanvasTexture(c);
+          };
+          const glow = mk((x) => {
+            const g = x.createRadialGradient(64, 64, 0, 64, 64, 64);
+            g.addColorStop(0, "rgba(255,255,255,1)");
+            g.addColorStop(0.3, "rgba(255,255,255,.4)");
+            g.addColorStop(1, "rgba(255,255,255,0)");
+            x.fillStyle = g;
+            x.fillRect(0, 0, 128, 128);
+          });
+          const cloudT = [0, 1, 2].map(() =>
+            mk((x) => {
+              for (let i = 0; i < 16; i++) {
+                const px = 40 + R() * 176,
+                  py = 44 + R() * 44,
+                  r = 26 + R() * 34,
+                  g = x.createRadialGradient(px, py, 0, px, py, r);
+                g.addColorStop(0, "rgba(255,255,255,.55)");
+                g.addColorStop(1, "rgba(255,255,255,0)");
+                x.fillStyle = g;
+                x.fillRect(0, 0, 256, 128);
+              }
+            }),
+          );
+          const wire = (g, c, o) =>
+            new T.LineSegments(
+              g,
+              new T.LineBasicMaterial({
+                color: c,
+                transparent: true,
+                opacity: o,
+              }),
+            );
+          const spr = (c, s, o) => {
+            const p = new T.Sprite(
+              new T.SpriteMaterial({
+                map: glow,
+                color: c,
+                blending: ADD,
+                depthWrite: false,
+                opacity: o || 1,
+              }),
+            );
+            p.scale.set(s, s, 1);
+            return p;
+          };
+          /* drifting clouds */
+          const nC = small ? 6 : 11,
+            clouds = Array.from({ length: nC }, (_, i) => {
+              const w = 7 + R() * 6,
+                m = new T.Sprite(
+                  new T.SpriteMaterial({
+                    map: cloudT[i % 3],
+                    color: i % 3 ? 0xcbb58a : CY,
+                    transparent: true,
+                    depthWrite: false,
+                    opacity: 0.12 + R() * 0.14,
+                  }),
+                );
+              m.scale.set(w, w * 0.5, 1);
+              const bx = (i % 2 ? 1 : -1) * (3 + R() * 7);
+              m.position.set(bx, 2 - i * (18 / nC), -5 - R() * 7);
+              m.userData = { bx, i };
+              sc.add(m);
+              return m;
+            });
+          /* data-centre cubes */
+          const bg = new T.EdgesGeometry(new T.BoxGeometry(1, 1, 1)),
+            cubes = Array.from({ length: small ? 30 : 64 }, (_, i) => {
+              const m = wire(bg, i % 3 ? CY : IN, 0.14 + R() * 0.2),
+                s = 0.2 + R() * 0.4;
+              m.scale.set(s, s, s);
+              m.position.set((R() - 0.5) * 22, 3 - R() * 19, -8 + R() * 9);
+              m.userData = { r: (R() - 0.5) * 0.5, q: (R() - 0.5) * 0.5 };
+              sc.add(m);
+              return m;
+            });
+          const N = small ? 250 : 500,
+            dp = new Float32Array(N * 3);
+          for (let i = 0; i < N; i++) {
+            dp[i * 3] = (R() - 0.5) * 24;
+            dp[i * 3 + 1] = 4 - R() * 21;
+            dp[i * 3 + 2] = -10 + R() * 12;
+          }
+          const dg = new T.BufferGeometry();
+          dg.setAttribute("position", new T.BufferAttribute(dp, 3));
+          sc.add(
+            new T.Points(
+              dg,
+              new T.PointsMaterial({
+                size: 0.035,
+                color: 0xd9c59a,
+                transparent: true,
+                opacity: 0.55,
+                depthWrite: false,
+              }),
+            ),
+          );
+          /* layout + loop */
+          let mx = 0,
+            my = 0,
+            last = 0;
+          addEventListener("pointermove", (e) => {
+            mx = e.clientX / innerWidth - 0.5;
+            my = e.clientY / innerHeight - 0.5;
+          });
+          const size = () => {
+            rd.setSize(innerWidth, innerHeight, false);
+            cam.aspect = innerWidth / innerHeight;
+            cam.updateProjectionMatrix();
+          };
+          size();
+          function frame(now) {
+            const t = now / 1000,
+              dt = Math.min(t - last, 0.05);
+            last = t;
+            const H = document.documentElement,
+              p = Math.min(
+                1,
+                scrollY / Math.max(1, H.scrollHeight - innerHeight),
+              );
+            bar.style.transform = "scaleX(" + p + ")";
+            cam.position.y = -p * 15;
+            cam.position.x += (mx * 0.8 - cam.position.x) * 0.04;
+            clouds.forEach((c) => {
+              c.position.x =
+                c.userData.bx + Math.sin(t * 0.06 + c.userData.i) * 0.9;
+            });
+            cubes.forEach((c) => {
+              c.rotation.x += dt * c.userData.r;
+              c.rotation.y += dt * c.userData.q;
+            });
+            rd.render(sc, cam);
+          }
+          if (reduce) {
+            frame(0);
+            addEventListener("scroll", () => frame(0), { passive: true });
+            addEventListener("resize", () => {
+              size();
+              frame(0);
+            });
+          } else {
+            addEventListener("resize", size);
+            (function loop(n) {
+              requestAnimationFrame(loop);
+              if (!document.hidden) frame(n);
+            })(0);
+          }
+        } catch (e) {
+          if (cv) cv.remove();
+        }
+      })();
+    </script>
+    <script>
+      (function () {
+        const items = Array.from(document.querySelectorAll(".cert")),
+          box = document.getElementById("lightbox"),
+          img = document.getElementById("lbImg"),
+          ttl = document.getElementById("lbTitle"),
+          open = document.getElementById("lbOpen");
+        let cur = 0;
+        function show(i) {
+          cur = (i + items.length) % items.length;
+          const d = items[cur].dataset;
+          img.src = d.full;
+          img.alt = "Certificate: " + d.title;
+          ttl.textContent = d.title;
+          open.href = encodeURI(d.src);
+        }
+        function openBox(i) {
+          show(i);
+          box.hidden = false;
+          document.body.style.overflow = "hidden";
+          document.getElementById("lbClose").focus();
+        }
+        function closeBox() {
+          box.hidden = true;
+          document.body.style.overflow = "";
+          items[cur].focus();
+        }
+        items.forEach((b, i) => b.addEventListener("click", () => openBox(i)));
+        document.getElementById("lbClose").addEventListener("click", closeBox);
+        document.getElementById("lbPrev").addEventListener("click", () => show(cur - 1));
+        document.getElementById("lbNext").addEventListener("click", () => show(cur + 1));
+        box.addEventListener("click", (e) => {
+          if (e.target === box) closeBox();
+        });
+        addEventListener("keydown", (e) => {
+          if (box.hidden) return;
+          if (e.key === "Escape") closeBox();
+          if (e.key === "ArrowLeft") show(cur - 1);
+          if (e.key === "ArrowRight") show(cur + 1);
+        });
+      })();
+    </script>
+  </body>
+</html>
