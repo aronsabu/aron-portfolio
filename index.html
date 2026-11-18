@@ -1606,7 +1606,12 @@
               >
             </div>
           </div>
-          <form class="contact-form" id="contactForm">
+          <form
+  class="contact-form"
+  id="contactForm"
+  action="https://formspree.io/f/mqpqgjgz"
+  method="POST"
+>
             <input
               type="text"
               id="senderName"
@@ -1638,7 +1643,7 @@
             </button>
           </form>
           <p class="form-note" id="formNote">
-            Your message will open in your email app, ready to send.
+            Your message will be delivered directly to my inbox.
           </p>
         </section>
       </div>
@@ -1718,7 +1723,7 @@ contactForm.addEventListener("submit", async (event) => {
       "Network error. Please try again.";
   } finally {
     submitBtn.disabled = false;
-    submitBtn.textContent = "Send";
+    submitBtn.innerHTML = 'Send <span aria-hidden="true">➤</span>';
   }
 });
 
