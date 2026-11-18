@@ -1714,10 +1714,17 @@ contactForm.addEventListener("submit", async (event) => {
       formNote.textContent =
         "Thank you! Your message has been sent successfully.";
       contactForm.reset();
-    } else {
-      formNote.textContent =
-        "Unable to send your message. Please try again.";
-    }
+   } else {
+  const result = await response.json().catch(() => ({}));
+
+  const errorMessage = result.errors
+    ? result.errors.map(e => e.message).join(", ")
+    : result.error || "HTTP " + response.status;
+
+  formNote.textContent = "Form error: " + errorMessage;
+
+  console.error("Formspree error:", result);
+}
   } catch (error) {
     formNote.textContent =
       "Network error. Please try again.";
